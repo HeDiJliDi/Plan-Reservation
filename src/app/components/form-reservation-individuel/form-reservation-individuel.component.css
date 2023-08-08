@@ -1,0 +1,72 @@
+
+.btnDelete {
+  display: inline-block;
+}
+
+mat-dialog-actions button {
+  margin: 0px 4px 0px 4px;
+}
+.datepickers-container {
+display: flex;
+}
+
+.datepickers-container .mat-form-field {
+margin-right: 10px;
+width:25%;
+}
+.NumeroReservation{
+  margin-right: 10px;
+  width:25%;
+}
+.firstLine{
+  display: flex;
+align-items: center;
+}
+
+
+.Reserveur-container {
+display: flex;
+align-items: center;
+}
+
+.Reserveur-container .mat-form-field {
+margin-right: 10px;
+width:25%;
+}
+.selct-container{
+display: flex;
+align-items: center;
+}
+.selct-container .mat-form-field {
+margin-right: 10px;
+width:25%;
+}
+.PR-container{
+  display: flex;
+align-items: center;
+}
+.PR-container .mat-form-field {
+  margin-right: 10px;
+  width:25%;
+  }
+.secondItem{
+  margin-left: 15%;
+}
+.thirdItem{
+  margin-left: 7.5%;
+}
+.Date{
+  width:25%;
+}
+.secondItemInFirsLine{
+  width:25
+}
+.ChambreFooter {
+  display: flex;
+  align-items: center;
+  }
+
+  .ChambreFooter .mat-form-field {
+  margin-right: 10px;
+  width:22%;
+  }

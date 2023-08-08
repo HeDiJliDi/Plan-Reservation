@@ -1,0 +1,91 @@
+<h2 mat-dialog-title>{{ title }} Reception Individuel</h2>
+
+<form class="form-container100 popup" (ngSubmit)="onConfirm(f)" #f="ngForm">
+
+  <!-- <mat-dialog-content >
+    <div class="firstLine">
+      <mat-form-field class="NumeroArrivee">
+        <input matInput [readonly]="true" [value]="NumeroArrivee" placeholder="Numéro Arrivé">
+      </mat-form-field>
+      <mat-form-field class="secondItem">
+        <mat-select name="Organisme" placeholder="Organisme" [ngModel]="societeDivers.DesignationSociete">
+          <mat-option *ngFor="let societe of societeDivers" [value]="societeDivers.NumeroSociete">
+            {{ societe.DesignationSociete }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <mat-form-field >
+      <mat-select name="listeArrivee" placeholder="Numero Reservation" [ngModel]="listeArrivee.NumeroReservation">
+        <mat-option *ngFor="let liste of listeArrivee" [value]="listeArrivee.NumeroReservation">
+          {{ listeArrivee.NumeroReservation }}/{{listeArrivee.DateArrivee}}/{{listeArrivee.PersonneReserveur}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="datepickers-container">
+      <mat-form-field class="Date">
+        <mat-datepicker #picker1></mat-datepicker>
+        <input matInput [matDatepicker]="picker1" name="startDate" placeholder="Date Arrivé" [ngModel]="startDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      </mat-form-field>
+
+      <mat-form-field class="secondItem">
+        <mat-datepicker #picker2></mat-datepicker>
+        <input matInput [matDatepicker]="picker2" name="endDate" placeholder="Date Départ" [ngModel]="endDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      </mat-form-field>
+    </div>
+
+     <div class="PR-container">
+      <mat-form-field>
+        <input matInput type="number" name="name" placeholder="Nombre de personnes" [ngModel]="nbPersonne" required min="1">
+      </mat-form-field>
+      <mat-form-field class="secondItem">
+        <mat-select name="Premier Service" placeholder="Premier Service" [ngModel]="premierService.codePremierService">
+          <mat-option *ngFor="let service of premierService" [value]="service.codePremierService">
+            {{ service.libellePremierService }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="Reserveur-container">
+      <mat-form-field >
+        <input matInput name="name" placeholder="Affecté à" [ngModel]="bookingName" required>
+      </mat-form-field>
+      <mat-form-field class="thirdItem">
+        <input matInput name="name" placeholder="Réservé Par" [ngModel]="reserveur" required>
+      </mat-form-field>
+      <mat-form-field class="thirdItem">
+        <input matInput name="name" placeholder="N°Téléphone" [ngModel]="telephone" required>
+      </mat-form-field>
+    </div>
+    <div class="PR-container">
+      <mat-form-field class="Date">
+        <mat-datepicker #picker3></mat-datepicker>
+        <input matInput [matDatepicker]="picker3" name="resrvationDate" placeholder="Date De Réservation" [(ngModel)]="resrvationDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+      </mat-form-field>
+
+    <mat-form-field  class="secondItem" >
+    <mat-select name="moyenReservation" placeholder="--Moyen de Réservation--" [ngModel]="moyenReservation">
+      <mat-option [value]="'téléphone'">Téléphone</mat-option>
+      <mat-option [value]="'Faxe'">Faxe</mat-option>
+      <mat-option [value]="'Mail'">Mail</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div>
+
+    <mat-form-field>
+      <input matInput name="name" placeholder="Observation" [ngModel]="Observation" >
+    </mat-form-field>
+
+
+  </mat-dialog-content> -->
+
+  <mat-dialog-actions>
+
+    <button mat-raised-button color="primary" [disabled]="f.invalid">Save</button>
+    <button mat-raised-button type="button" (click)="onClose()">Cancel</button>
+  </mat-dialog-actions>
+</form>

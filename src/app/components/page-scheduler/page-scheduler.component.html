@@ -1,0 +1,15 @@
+<div class="pagescheduler">
+  <app-calendar
+    [day]="day"
+    [month]="month"
+    [year]="year"
+    [rooms]="rooms"
+    [bookings]="bookings"
+    [occupations]="occupations"
+    (changereservation)="onReservationChanged($event)"
+    (changeoccupation)="onOccupationChanged($event)"
+    (reservation)="onDayReservation($event)">
+    (occ)="onDayOccupation($event)"
+
+  </app-calendar>
+</div>

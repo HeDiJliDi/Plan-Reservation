@@ -1,0 +1,43 @@
+
+.containerNavigationBarh {
+    display: flex;
+}
+
+.panelNavigationBar {
+    flex: 1 1 auto;
+}
+
+.panelSearch {
+    display: inline-block;
+}
+
+.panelDatePicker {
+    display: inline-block;
+}
+
+.mat-datepicker-popup {
+    position: relative;
+    top: 110px
+}
+
+.containerStatusbar {
+    height: 20px;
+    margin-left: 2%;
+}
+
+.panelStatusbar {
+    display: inline-block;
+}
+.red-button {
+  background-color:  rgb(152, 26, 26);
+  color: white;
+}
+.fixed-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Couleur de fond souhaitée */
+  z-index: 999; /* Assurez-vous que le z-index est suffisamment élevé pour être au-dessus du contenu défilant */
+  /* Autres styles que vous souhaitez appliquer */
+}

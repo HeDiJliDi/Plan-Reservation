@@ -1,0 +1,65 @@
+<!-- <h2 mat-dialog-title>{{ title }} réservation</h2>
+
+<form class="form-container100 popup" (ngSubmit)="onConfirm(f)" #f="ngForm">
+  <mat-dialog-content>
+    <div *ngIf="booking.bookingId !== 0">
+      N. réservation {{ booking.bookingId }}
+      <br><br>
+    </div>
+    <div class="selct-container">
+      <mat-form-field>
+        <mat-select name="roomid" placeholder="-- N°Chambre --" [ngModel]="roomid">
+          <mat-option *ngFor="let room of rooms" [value]="room.roomId">
+            {{ room.roomNumber }} {{ room.typeName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select name="Reception" placeholder="-- Réception --" [ngModel]="Reception">
+          <mat-option [value]="'individuelle'">Réception individuelle</mat-option>
+          <mat-option [value]="'groupe'">Réception de groupe</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="datepickers-container">
+      <mat-form-field>
+        <mat-datepicker #picker1></mat-datepicker>
+        <input matInput [matDatepicker]="picker1" name="startDate" placeholder="Date Arrivé" [ngModel]="startDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-datepicker #picker2></mat-datepicker>
+        <input matInput [matDatepicker]="picker2" name="endDate" placeholder="Date Départ" [ngModel]="endDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      </mat-form-field>
+    </div>
+
+
+    <div class="Reserveur-container">
+      <mat-form-field>
+        <input matInput name="name" placeholder="Affecté à" [ngModel]="booking.name" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="name" placeholder="Réservé Par" [ngModel]="reserveur" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="name" placeholder="N°Téléphone" [ngModel]="telephone" required>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field>
+      <input matInput name="name" placeholder="Nom de Societé" [ngModel]="societe" >
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <div class="btnDelete" *ngIf="booking.bookingId !== 0">
+      <button mat-raised-button color="primary" type="button" (click)="onDelete()">Delete</button>
+    </div>
+    <button mat-raised-button color="primary" [disabled]="f.invalid">Save</button>
+    <button mat-raised-button type="button" (click)="onClose()">Cancel</button>
+  </mat-dialog-actions>
+</form> -->

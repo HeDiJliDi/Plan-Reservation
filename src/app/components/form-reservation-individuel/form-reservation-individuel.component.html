@@ -1,0 +1,96 @@
+<h2 mat-dialog-title>{{ title }} réservation groupe</h2>
+
+<form class="form-container100 popup" (ngSubmit)="onConfirm(f)" #f="ngForm">
+
+  <!-- <mat-dialog-content >
+    <div class="firstLine">
+      <mat-form-field class="NumeroReservation">
+        <input matInput [readonly]="true" [value]="NumeroReservation" placeholder="Numéro de réservation">
+      </mat-form-field>
+    </div>
+    <div class="datepickers-container">
+      <mat-form-field class="Date">
+        <mat-datepicker #picker1></mat-datepicker>
+        <input matInput [matDatepicker]="picker1" name="startDate" placeholder="Date Arrivé" [ngModel]="startDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      </mat-form-field>
+
+      <mat-form-field class="secondItem">
+        <mat-datepicker #picker2></mat-datepicker>
+        <input matInput [matDatepicker]="picker2" name="endDate" placeholder="Date Départ" [ngModel]="endDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      </mat-form-field>
+    </div>
+     <div class="PR-container">
+      <mat-form-field>
+        <input matInput type="number" name="nbPersonne" placeholder="Nombre de personnes" [ngModel]="nbPersonne" required min="1">
+      </mat-form-field>
+      <mat-form-field class="secondItem">
+        <mat-select name="PremierService" placeholder="Premier Service" [ngModel]="PremierService">
+          <mat-option *ngFor="let service of premierService" [value]="service.codePremierService">
+            {{ service.libellePremierService }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="Reserveur-container">
+      <mat-form-field >
+        <input matInput name="bookingName" placeholder="Affecté à" [ngModel]="bookingName" required>
+      </mat-form-field>
+      <mat-form-field class="thirdItem">
+        <input matInput name="reserveur" placeholder="Réservé Par" [ngModel]="reserveur" required>
+      </mat-form-field>
+      <mat-form-field class="thirdItem">
+        <input matInput name="telephone" placeholder="N°Téléphone" [ngModel]="telephone" required>
+      </mat-form-field>
+    </div>
+    <div class="PR-container">
+      <mat-form-field class="Date">
+        <mat-datepicker #picker3></mat-datepicker>
+        <input matInput [matDatepicker]="picker3" name="resrvationDate" placeholder="Date De Réservation" [(ngModel)]="resrvationDate" readonly>
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+      </mat-form-field>
+
+    <mat-form-field  class="secondItem" >
+      <mat-select name="moyenReservation" placeholder="--Moyen de Réservation--" [ngModel]="moyenReservation">
+        <mat-option   *ngFor="let moyen of moyenReservation"  [value]="moyen.CodeMoyen">{{moyen.LibelleMoyen}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+    <mat-form-field>
+      <input matInput name="Observation" placeholder="Observation" [ngModel]="Observation" >
+    </mat-form-field>
+    <br>
+    <mat-card style="border: 1px solid  rgb(157, 46, 46);">
+      <mat-card-actions>
+        <div class="ChambreFooter">
+          <mat-form-field>
+            <mat-label>Catégorie</mat-label>
+            <mat-select name="categorie" [ngModel]="categorie">
+              <mat-option *ngFor="let cat of categorie" [value]="cat.CodeCategorie">{{cat.Designation}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Nbe Chambre</mat-label>
+        <input matInput type="number" name="nbrChambre" [ngModel]="nbrChambre" placeholder="Nbe Chambre" required min="1">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Arrangement</mat-label>
+              <mat-select name="CodeTypeReservation" [ngModel]="CodeTypeReservation">
+                <mat-option *ngFor="let arr of arrangement" [value]="arr.LibelleTypeReservation">{{arr.LibelleTypeReservation}} </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Nbr Nuité</mat-label>
+        <input matInput type="number" name="nbrNuite" placeholder="Nbr Nuité" [ngModel]="nbrNuite" required min="1">
+
+          </mat-form-field>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </mat-dialog-content> -->
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" [disabled]="f.invalid">Save</button>
+    <button mat-raised-button type="button" (click)="onClose()">Cancel</button>
+  </mat-dialog-actions>
+</form>
